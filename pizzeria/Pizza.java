@@ -15,14 +15,13 @@ public class Pizza {
     public Pizza(String tamano,  String tipo){
 
         this.tamano = tamano;
-        this.estado = "pedido";
+        this.estado = "pedida";
         this.tipo = tipo;
         Pizza.pedidas++;
 
     }
 
     
-
 
     static int getServidas(){
         return Pizza.servidas;
@@ -38,7 +37,6 @@ public class Pizza {
     public String toString() {
         return "Su pizza -> " +this.tipo+ " " +this.tamano+ "  |>  " +this.estado;
     }
-
 
 
 

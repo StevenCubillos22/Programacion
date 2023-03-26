@@ -33,8 +33,6 @@ public class EntradaComprar {
             do {
 
 
-            
-
             System.out.println("- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  - ");
             System.out.println("|Bienvenido a Expocoches Campanillas. Seleccione una de las opcienes:| ");
             System.out.println("1. Mostrar numero de entradas libres.                                | ");
@@ -99,10 +97,6 @@ public class EntradaComprar {
             }
 
 
-
-
-
-         
 
             sc.close();
         } while (eleccion != 3);

@@ -28,7 +28,7 @@ public class Zona {
             System.out.println("Lo siento, las entradas se encuentra agotadas para esa zona");
 
         } else if (this.entradasPorVender > n) {
-            System.out.println("Solo me quedan" +this.entradasPorVender+ " entradas para º11esa zona");
+            System.out.println("Solo me quedan" +this.entradasPorVender+ " entradas para esta zona");
         }
     }
 

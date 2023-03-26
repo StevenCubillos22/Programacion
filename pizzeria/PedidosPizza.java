@@ -32,7 +32,7 @@ public class PedidosPizza {
         System.out.println(pe3);
         pe2.servir();
 
-        System.out.println("| PIZZAS PEDIDAS |> " +Pizza.getPedidas());
+        System.out.println("| PIZZAS PEDIDAS  |> " +Pizza.getPedidas());
         System.out.println("| PIZZAS SERVIDAS |> " +Pizza.getServidas());
         
     }
