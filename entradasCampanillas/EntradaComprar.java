@@ -3,7 +3,9 @@
  *Campanillas que tiene 3 zonas, la sala principal con 1000 entradas disponibles, la zona de compra-venta con 200 entradas disponibles y la zona vip
  *con 25 entradas disponibles. Hay que controlar que existen entradas antes de
  *venderlas.
- * 
+ *Ahora. Se debe evitar que el programa se  detenga con una excepción, introduciendo el código que lee el teclado en un bloque try-catch.
+*Como se indica en el ejemplo de las páginas 306 y 307 del libro, simplemente mostrando un mensaje 
+ * de que los datos introducidos no son correctos y volviendo al menú para permitir introducirlo de nuevo. 
  * @Steven Cubillos Garcia
  */
 
@@ -31,7 +33,6 @@ public class EntradaComprar {
 
 
             do {
-
 
             System.out.println("- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  - ");
             System.out.println("|Bienvenido a Expocoches Campanillas. Seleccione una de las opcienes:| ");
@@ -61,6 +62,8 @@ public class EntradaComprar {
                     System.out.println("3. Sala VIP");
                     opcion = sc.nextInt();
 
+                 //Bloque try que, una vez metamos datos erroneos nos llevara al bloque catch
+                try{
 
                     System.out.print("¿Cuantas entradas quieres comprar?");
                     int entradas = sc.nextInt();
@@ -84,6 +87,18 @@ public class EntradaComprar {
                         System.out.println("Error en la seleccion...");
                     }
 
+                    //En el bloque catch se visualiza el tipo de excepcion y error y que nos devolveria al menu, con sus mensajes de error y excepcion
+                } catch(Exception e) {
+
+                    System.out.println("E X C E P C I O N: "+e.getClass());
+                    System.out.println("E R R O R: "+e.getMessage());
+                    System.out.println("Ha habido un error en la lectura de datos =( ");
+                    System.out.println("Consulta mas detalles en el manual");
+                    System.out.println(" ");
+                    sc.nextLine();
+
+                }
+
 
                 case 3:
                 System.out.println("¡Hasta luego!");
@@ -93,17 +108,14 @@ public class EntradaComprar {
                 System.out.println("Error en la seleccion...");
 
 
-
             }
 
 
-
-            sc.close();
+            
         } while (eleccion != 3);
 
-
+        sc.close();
     }
-
 
 
     }

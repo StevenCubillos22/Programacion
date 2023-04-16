@@ -78,5 +78,20 @@ public class GatoSimple {
              }
             }
           }
+
+          ///throw angular, nueva version?
+
+          GatoSimple apareaCon(GatoSimple pareja) throws ExcepcionApareamientoImposible {
+            if(this.sexo.equals(pareja.getSexo())) {
+              throw new ExcepcionApareamientoImposible("Al juntar gatos del mismo sexo no se pueden aparear");
+            } else { //Math random que elige una de las dos opciones al azar, macho o hembra
+              String sexoNacimiento = (int) (Math.random() * 2) == 0 ? "macho" : "hembra";
+              GatoSimple cria = new GatoSimple(sexoNacimiento);
+              System.out.println("Ha nacido una nueva cria "+sexoNacimiento);
+              return cria;
+            }
+          }
+
+
         }
         

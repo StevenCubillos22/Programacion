@@ -1,9 +1,16 @@
 
-
-
-
 import java.util.Scanner;
+
+
+
 public class Prueba {
+
+
+    //Funcion que nos dice si una cadena de caracteres represente un numero valido
+    //Devuelve verdadero si str no es nulo
+    private static boolean esNumeric(String str){
+        return str != null && str.matches("[0-9.]+");
+ }
 
     public static void main(String[]Args) {
 
@@ -17,8 +24,11 @@ public class Prueba {
 
         int kilometro1;
         int kilometro2;
-        int eleccion = 0;
+        String eleccion;
+        int opcionNum;
 
+
+        
 
         System.out.println("Elige una opcion: ");
         System.out.println("1. Coge la bici y pedalea: ");
@@ -29,11 +39,17 @@ public class Prueba {
         System.out.println("6. Haz un derrape del coche: ");
         System.out.println("7. Salir: ");
 
-        eleccion =sc.nextInt();
+        eleccion =sc.nextLine();
+
+        if(esNumeric(eleccion)) {
+            opcionNum=Integer.parseInt(eleccion);
+        } else {
+            opcionNum=0;
+        }
 
 
 
-        switch (eleccion) {
+        switch (opcionNum) {
 
             case 1:
             System.out.println("¿Cuantos kms quieres recorrer?: ");
@@ -53,8 +69,6 @@ public class Prueba {
             case 3:
             decathlon.ollie();
             break;
-
-
 
 
             case 4:
@@ -84,8 +98,8 @@ public class Prueba {
 
 
 
-
         }
+
 
 
 
